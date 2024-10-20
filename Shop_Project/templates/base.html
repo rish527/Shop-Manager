@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block tittle %}Shop Manager{% endblock tittle %} </title>
+</head>
+
+<style>
+    html, body {
+        height: 100%; 
+        margin: 0;    
+        padding: 0; 
+    }
+    h1{
+        margin:0px;
+    }
+    h2{
+        margin:0px;
+    }
+    h3{
+        margin:0px;
+    }
+</style>
+
+<body>
+    <header>
+        {% comment %} <h1 style="margin:0px">Shop Manager</h1> {% endcomment %}
+        {% comment %} <nav>
+            <a href="{%url 'listofShops' %}">Shop List</a>
+            <a href="{% url 'register_shop' %}">Create Shop</a>
+        </nav> {% endcomment %}
+    </header>
+
+    <main style="margin:0px; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%">
+        {% block content %}
+        
+        {% endblock content %}
+    </main>
+</body>
+</html>

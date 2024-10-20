@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <H2>Welcome to the Shop Manager Application</H2>
+    <p>This is a simple application that allows you to manage your shop.</p>
+    </br>
+
+    <h3 style="margin:5px;">Search Shop nearest to you</h3>
+    <form action="{% url 'searchShops' %}" method="GET">
+        {% csrf_token %}
+        <input type="number" name="longitude" placeholder="Longitude" step="any" required>
+        <input type="number" name="latitude" placeholder="Latitude" step="any" required>
+        <input type="submit" value="Search">
+    </form>
+    </br>
+    <h3>Add Your Shop to Shop Manager</h3>
+    <a href="{% url 'register_shop' %}">Create Shop</a>
+{% endblock content %}
